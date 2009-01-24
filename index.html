@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Unobtrusive Image Rollover</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/default.css"></link>
+  <script type="text/javascript" src="javascripts/prototype.js"></script>
+  <script type="text/javascript" src="javascripts/rollover.js"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      new Rollover('nav');
+    }
+  </script>
+</head>
+<body>
+  <h1><a href="http://www.pluitsolutions.com/projects/rollover">Rollover v1.1</a></h1>
+  <p><em>Unobtrusive Image Rollover with <a href="http://www.prototypejs.org/">Prototype</a> Library.</em></p>
+  <p>by <a href="http://www.pluitsolutions.com">Herryanto Siatono</a></p>
+
+  <h2>Example</h2>
+  <ul id="nav">
+    <li><a href="#"><img src="images/home_sel.gif" width="69" height="13" alt="Home" /></a></li>
+    <li><a href="#"><img src="images/about_us.gif" width="90" height="13" alt="About Us" /></a></li>
+    <li><a href="#"><img src="images/products.gif" width="153" height="13" alt="Products &amp; Services" /></a></li>
+    <li><a href="#"><img src="images/news.gif" width="69" height="13" alt="News" /></a></li>
+    <li><a href="#"><img src="images/contact_us.gif" width="101" height="13" alt="News" /></a></li>
+  </ul>
+
+  <h2>How to Use</h2>
+  <ol>
+    <li>Copy <code>prototype.js</code> and <code>rollover.js</code> to your javascript directory.</li>
+    <li>Create a link to the javascript files from your HTML page.
+      <pre>
+  &lt;script type="text/javascript" src="javascripts/prototype.js"&gt;&lt;/script&gt;
+  &lt;script type="text/javascript" src="javascripts/rollover.js"&gt;&lt;/script&gt;</pre>
+    </li>
+    <li>Create the rollover images and append '_over' to the image name. If you would like to show a different style for the selected image, identify with '_sel' suffix.
+        Refer to the <a href="#option">Option</a> section below for more information.</li>
+
+    <li>Write the HTML codes to display links to images with rollover effect, and assign an <code>id</code> to its parent container.
+    <pre>
+  &lt;ul id="nav"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/home_sel.gif" width="69" height="13" alt="Home" /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/about_us.gif" width="90" height="13" alt="About Us" /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/products.gif" width="153" height="13" alt="Products &amp; Services" /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/news.gif" width="69" height="13" alt="News" /&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/contact_us.gif" width="101" height="13" alt="News" /&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;</pre></li>
+    <li>Apply the unobtrusive rollover effect on page load.
+    <pre>
+  &lt;script type="text/javascript"&gt;
+    window.onload = function() {
+      new Rollover('nav');
+    }
+  &lt;/script&gt;</pre>
+
+    Or call it from the <code>body</code> tag <code>onload</code> event:
+     <pre>
+  &lt;body onload="new Rollover('nav');"&gt;</pre>
+    </li>
+  </ol>
+  <br/>
+  <a name="option"></a>
+  <h2>Options</h2>
+  <p>By default, Rollover javascript assumes rollover image name has <code>_over</code> suffix, and the selected image has <code>_sel</code> suffix. Example:
+    <pre>
+      about_us.gif
+
+      // Rollover image
+      about_us_over.gif
+
+      // Selected image
+      about_us_sel.gif</pre>
+
+  <p>If you don't like the naming convention, you can change them by passing the following options when initializing the <code>Rollover</code> object.</p>
+  <ul>
+    <li><strong>suffixSeperator</strong>, default: '-'</li>
+    <li><strong>rolloverSuffix</strong>, default: 'over'</li>
+    <li><strong>selectedSuffix</strong>, default: 'sel'</li>
+  </ul>
+
+  <h3>Example:</h3>
+  <pre>
+  &lt;script type="text/javascript"&gt;
+    window.onload = function() {
+      new Rollover('nav', {suffixSeperator: '-', rolloverSuffix: 'hover',
+        selectedSuffix: 'active'});
+    }
+  &lt;/script&gt;</pre>
+
+  <h2><a href="download/rollover-1.1.zip">Download</a></h2>
+
+</body>
+</html>

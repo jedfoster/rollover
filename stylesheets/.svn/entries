@@ -1,0 +1,40 @@
+8
+
+dir
+1015
+svn+ssh://herry@bookjetty.com/home/svn-repos/rollover/trunk/stylesheets
+svn+ssh://herry@bookjetty.com/home/svn-repos
+
+
+
+2007-05-22T07:07:10.422458Z
+196
+herry
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+76002da4-3126-0410-85dd-c59abcd950a0
+
+default.css
+file
+
+
+
+
+2009-01-24T02:32:57.000000Z
+3c763a02a059b900d0ea4771f1327d9e
+2007-05-22T07:07:10.422458Z
+196
+herry
+

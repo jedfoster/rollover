@@ -1,0 +1,5 @@
+rel-1.1 (10 Mar 2008)
+- Rollover or rollback image only if it's found on triggered element.
+
+rel-1.0 (22 May 2007)
+- Initial release.

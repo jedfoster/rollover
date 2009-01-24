@@ -1,0 +1,52 @@
+8
+
+dir
+1015
+svn+ssh://herry@bookjetty.com/home/svn-repos/rollover/trunk/javascripts
+svn+ssh://herry@bookjetty.com/home/svn-repos
+
+
+
+2008-03-10T04:11:15.548000Z
+765
+herry
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+76002da4-3126-0410-85dd-c59abcd950a0
+
+rollover.js
+file
+
+
+
+
+2009-01-24T02:32:57.000000Z
+7171ec888bab86af752cd14329c9f2f5
+2008-03-10T04:11:15.548000Z
+765
+herry
+
+prototype.js
+file
+
+
+
+
+2009-01-24T02:32:57.000000Z
+3f1a3b63fe59ce5ec9de7a86f825b787
+2007-05-22T05:04:11.380943Z
+193
+herry
+
