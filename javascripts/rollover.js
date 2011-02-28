@@ -1,13 +1,14 @@
 /*  
- * Unobtrusive image rollover with Prototype library, v1.1
+ * Unobtrusive image rollover with Prototype library, v1.2
  * 
  * Created by Herryanto Siatono
  * Copyright (c) 2007 Pluit Solutions <www.pluitsolutions.com>
+ * Additions (c) 2011 Jed Foster <jedfoster.com>
  * 
  * This script is freely distributable under the terms of an MIT-style license.
 /*------------------------------------------------------------------------------*/
 
-var Rollover= Class.create();
+var Rollover = Class.create();
 Rollover.prototype = {
   // provide the container id containing image links to be rolled over.
   initialize: function(id, options) {
@@ -20,6 +21,7 @@ Rollover.prototype = {
   setOptions: function(options) {
     this.options = {
       rolloverSuffix: 'over',
+      rolloverClass: '.roller', // If you instantiate Rollover on a doc-wide element (i.e. #container) add this class attribute to the anchor element containing the image you want to rollover. Only images inside anchor tags with this class will inherit rollover behavior. This prevents issues if you have an image inside an anchor that you _DON'T_ want to rollover.
       selectedSuffix: 'sel',
       suffixSeperator: '_'
     };
@@ -27,7 +29,7 @@ Rollover.prototype = {
   },
 
   observeLinks: function() {
-    this.links = $$('#' + this.id + ' a');
+    this.links = $$('#' + this.id + ' a' + this.options.rolloverClass);
     for (i=0; i<this.links.length; i++) {
       this.links[i].observe('mouseover', this.rolloverImage);
       this.links[i].observe('mouseout', this.rollbackImage);

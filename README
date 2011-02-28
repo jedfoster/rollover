@@ -1,3 +1,6 @@
+rel-1.2 (28 Feb 2011)
+-  Added "rolloverClass" option. If you instantiate Rollover on a doc-wide element (i.e. #container) add this class attribute to the anchor element containing the image you want to rollover. Only images inside anchor tags with this class will inherit rollover behavior. This prevents issues if you have an image inside an anchor that you _DON'T_ want to rollover.
+
 rel-1.1 (10 Mar 2008)
 - Rollover or rollback image only if it's found on triggered element.
 
